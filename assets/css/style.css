@@ -1,0 +1,477 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end css reset */
+
+/* start custom css */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari&family=Lemonada&family=Outfit&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Outfit, Arial, Sans-Serif;
+}
+
+/* start header */
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+/* start navigation */
+.header-navbar {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    height: 60px;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a{
+    font: bold 32px "Anek Devanagari", Arial, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li a {
+    font: bold 14px "Lemonada", Arial, sans-serif;
+    color: #ededed;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000;
+}
+
+nav li a:hover {
+    padding-bottom: 2px;
+    border-bottom: 3px solid #ededed;
+}
+/* end navigation */
+
+/* start slider */
+.header-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: -60px;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.header-title h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    color: #DA0037;
+    text-shadow: 4px 4px 4px #444;
+    margin-bottom: 5px;
+}
+
+.header-title p {
+    font-size: 32px;
+    text-transform: capitalize;
+    color: #ededed;
+    text-shadow: 2px 2px 2px #666;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+    filter: brightness(70%);
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 60px;
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgb(0, 0, 0, 1);
+}
+
+.prev {
+    padding-right: 20px;
+}
+
+.next {
+    right: 0;
+    padding-left: 20px;
+}
+/* end slider */
+/* end header */
+
+/* start main */
+main {
+    display: flex;
+}
+
+/* start rooms */
+.rooms {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.rooms-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    min-height: 200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.rooms-description h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.rooms-images {
+    display: flex;
+}
+
+.images-set {
+    width: 33.33%;
+    height: 350px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.images-set img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(80%);
+}
+
+.images-set:hover img {
+    filter: brightness(50%);
+}
+
+.hotel-class {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ededed;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.images-set:hover .hotel-class {
+    color: #DA0037;
+}
+/* end rooms */
+/* start facilities */
+.facilities {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 100%;
+    background-color: #DA0037;
+}
+
+.facilities-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    min-height: 200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    color: #ededed;
+}
+
+.facilities-description h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.facilities-images {
+    display: flex;
+}
+
+.facilities-set {
+    width: 20%;
+    height: 250px;
+    position: relative;
+}
+
+.facilities-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(80%);
+}
+
+.facilities-set:hover img {
+    filter: brightness(50%);
+}
+
+.facilities-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 14px;
+    font-weight: bold;
+    color: #ededed;
+    text-shadow: 1px 1px 1px #ccc;
+    text-transform: uppercase;
+}
+/* end facilities */
+/* start about */
+.about {
+    text-align: center;
+    padding: 20px;
+    width: 60%;
+    margin: 20px auto 0;
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.about img {
+    width: 500px;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 2px #666) drop-shadow(-2px -2px 2px #666);
+}
+
+.about p {
+    margin-top: 30px;
+    text-align: justify;
+}
+/* end about */
+
+/* start contact */
+.contact {
+    display: flex;
+    min-height: 200px;
+    background-color: #DA0037;
+    color: #fff;
+    padding: 0 50px;
+    padding-top: 30px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.detail-info {
+    flex-basis: 60%;
+}
+
+.detail-contact {
+    flex-basis: 40%;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    border-left: 5px solid #fff;
+}
+
+.detail-picture {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.detail-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.detail-info td,
+.detail-contact td {
+    padding: 10px 5px;
+}
+/* end contact */
+/* end main */
+
+/* start footer */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+/* end footer */
+
+/* start viewport */
+@media screen and (max-width: 768px) {
+    .logo a {
+        font-size: 18px;
+    }
+
+    nav li a {
+        font-size: 12px;
+    }
+
+    .header-title h1 {
+        font-size: 48px;
+    }
+
+    .header-title p {
+        font-size: 24px;
+    }
+
+    .prev,
+    .next {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    h2,
+    .detail-info h2,
+    .detail-contact h2 {
+        font-size: 24px;
+    }
+
+    .rooms-description p,
+    .facilities-description p,
+    .about p,
+    .contact p,
+    td,
+    footer p {
+        font-size: 14px;
+    }
+    
+    .images-set {
+        height: 200px;
+    }
+    
+    .hotel-class {
+        font-size: 18px;
+    }
+    
+    .facilities-set {
+        height: 150px;
+    }
+
+    .facilities-caption {
+        font-size: 9px;
+    }
+
+    .about img {
+        width: 300px;
+    }
+
+    .contact {
+        padding: 30px 10px 0;
+    }
+
+    .detail-info,
+    .detail-contact {
+        flex-basis: 50%;
+    }
+
+    .detail-picture {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* end viewport */
